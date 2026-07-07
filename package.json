@@ -1,0 +1,23 @@
+{
+  "name": "obsidian-chiikawa",
+  "version": "0.1.0",
+  "description": "A simple Obsidian plugin that shows a floating image above notes.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production"
+  },
+  "keywords": [
+    "obsidian",
+    "plugin"
+  ],
+  "author": "Jason",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "builtin-modules": "^3.3.0",
+    "esbuild": "^0.20.2",
+    "obsidian": "^1.5.12",
+    "typescript": "^5.4.2"
+  }
+}

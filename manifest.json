@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-chiikawa",
+  "name": "Obsidian Chiikawa",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Shows a floating character above notes.",
+  "author": "Jason",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}
