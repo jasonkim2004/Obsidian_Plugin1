@@ -7,6 +7,12 @@ interface ObsidianChiikawaSettings {
   imageWidth: number;
 }
 
+interface PluginManagerApp extends App {
+  plugins: {
+    disablePlugin(pluginId: string): Promise<void>;
+  };
+}
+
 const DEFAULT_SETTINGS: ObsidianChiikawaSettings = {
   boxX: 160,
   boxY: 160,
@@ -159,6 +165,15 @@ export default class ObsidianChiikawaPlugin extends Plugin {
         .setIcon("reset")
         .onClick(async () => {
           await this.rollbackImageSize();
+        });
+    });
+    menu.addSeparator();
+    menu.addItem((item) => {
+      item
+        .setTitle("Turn off plugin")
+        .setIcon("power")
+        .onClick(async () => {
+          await this.turnOffPlugin();
         });
     });
 
@@ -327,6 +342,10 @@ export default class ObsidianChiikawaPlugin extends Plugin {
     this.pluginSettings.imageWidth = 0;
     await this.saveSettings();
     this.applyImageSize();
+  }
+
+  private async turnOffPlugin() {
+    await (this.app as PluginManagerApp).plugins.disablePlugin(this.manifest.id);
   }
 
   private async loadSettings() {
