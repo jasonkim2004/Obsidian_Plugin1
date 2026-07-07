@@ -2,6 +2,8 @@
 
 A simple Obsidian plugin that displays a floating image above your notes.
 
+https://github.com/user-attachments/assets/183f9768-b72d-4124-8195-f65e124e16f3
+
 ## Features
 
 - Show a floating image on top of the Obsidian workspace
