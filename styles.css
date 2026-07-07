@@ -7,5 +7,11 @@
   height: 120px;
   background: #000;
   border-radius: 8px;
+  cursor: grab;
   pointer-events: auto;
+  user-select: none;
+}
+
+.chiikawa-floating-box.is-dragging {
+  cursor: grabbing;
 }
